@@ -1,0 +1,150 @@
+PROJECT DOCUMENTATION
+Electricity Consumption Analysis of India (2019–2020)
+
+1. Problem Definition
+Electricity consumption is a key indicator of economic activity and infrastructure development. Different regions of India consume electricity at varying levels due to factors such as population density, industrial development, climate, and urbanization. During the COVID-19 pandemic in 2020, electricity consumption patterns changed significantly due to lockdown restrictions and reduced industrial operations.
+
+The objective of this project is to analyze electricity consumption patterns across Indian states and regions using data visualization techniques and identify trends and insights.
+
+---------------------------------------------------------------------
+
+2. Data Collection
+The dataset used in this project contains electricity consumption data across Indian states from January 2019 to December 2020.
+
+The dataset includes the following attributes:
+- State name
+- Region classification
+- Latitude
+- Longitude
+- Date of electricity usage
+- Electricity usage (in Mega Units)
+
+The dataset was collected in CSV format and used for further analysis and visualization.
+
+---------------------------------------------------------------------
+
+3. Data Storage and SQL Operations
+To manage the dataset efficiently, the data was stored in a MySQL database.
+
+Steps performed:
+- Created a database called electricity_analysis
+- Created a table called electricity_consumption
+- Imported the dataset using MySQL Workbench Table Data Import Wizard
+
+Example SQL operations used in the project:
+
+CREATE DATABASE electricity_analysis;
+
+USE electricity_analysis;
+
+CREATE TABLE electricity_consumption (
+    state VARCHAR(100),
+    region VARCHAR(50),
+    year INT,
+    month VARCHAR(20),
+    electricity_usage INT
+);
+
+SELECT * FROM electricity_consumption LIMIT 10;
+
+These queries verified that the data was successfully stored and accessible.
+
+---------------------------------------------------------------------
+
+4. Data Preparation
+Before visualization, the dataset was prepared to ensure it could be analyzed correctly.
+
+Data preparation steps included:
+- Checking column data types
+- Handling missing values
+- Verifying the structure of date fields
+- Removing unnecessary attributes
+
+The cleaned dataset was then imported into Tableau for visualization.
+
+---------------------------------------------------------------------
+
+5. Data Visualization
+Data visualization was performed using Tableau Public to better understand electricity consumption patterns.
+
+The following visualizations were created:
+
+1. Monthly Electricity Consumption Trend  
+   A line chart showing electricity consumption trends over time.
+
+2. Electricity Consumption by Region  
+   A bar chart comparing electricity usage across regions.
+
+3. State-wise Electricity Consumption Map  
+   A geographic visualization showing electricity usage distribution across states.
+
+4. Top Electricity Consuming States  
+   A chart identifying states with the highest electricity consumption.
+
+5. Regional Consumption Comparison (2019 vs 2020)  
+   A comparison of electricity consumption patterns between the two years.
+
+These visualizations helped identify regional differences and consumption patterns.
+
+---------------------------------------------------------------------
+
+6. Dashboard Creation
+An interactive dashboard was created in Tableau to combine all visualizations in one place.
+
+The dashboard allows users to:
+- View electricity consumption trends
+- Compare electricity usage across regions
+- Analyze electricity demand by state
+
+Interactive filters were added to enable dynamic exploration of the data.
+
+---------------------------------------------------------------------
+
+7. Story Creation
+A Tableau story was created to present the analysis step-by-step.
+
+The story includes the following scenes:
+1. Monthly electricity consumption trends
+2. Regional electricity demand comparison
+3. State-wise electricity distribution map
+4. Regional consumption comparison between 2019 and 2020
+
+The story format helps communicate insights clearly.
+
+---------------------------------------------------------------------
+
+8. Web Integration
+The Tableau dashboard was integrated into a Flask web application.
+
+The Flask application embeds the Tableau dashboard into a webpage, allowing users to interact with the visualization through a browser.
+
+Steps performed:
+- Created a Flask application
+- Embedded the Tableau dashboard using the provided embed code
+- Hosted the dashboard locally using Flask
+
+Run the application using:
+python app.py
+
+Then open the following URL in a browser:
+http://127.0.0.1:5000
+
+---------------------------------------------------------------------
+
+9. Results and Insights
+The analysis revealed several key insights:
+
+- Northern and Western regions show higher electricity consumption compared to other regions.
+- Some states consistently consume more electricity due to higher industrial and urban activity.
+- Electricity consumption patterns changed during the COVID-19 lockdown period.
+
+These insights highlight the differences in electricity demand across regions and time periods.
+
+---------------------------------------------------------------------
+
+10. Conclusion
+This project demonstrates how SQL, Tableau, and Flask can be used together to analyze electricity consumption patterns.
+
+By combining database management, data visualization, and web integration, the project provides meaningful insights into electricity usage trends across India.
+
+Future work could include analyzing additional years of data or applying predictive models to forecast electricity demand.
