@@ -23,4 +23,4 @@ An interactive Tableau dashboard and story were created to present insights abou
 (Add your Tableau Public link here)
 
 Example:
-https://public.tableau.com/views/ElectricityConsumptionAnalysisofIndia/Story1
+https://public.tableau.com/app/profile/gayef.ahmed.barlaskar/viz/ElectricityConsumptionAnalysisofIndia/ElectricityConsumptionAnalysisStory?publish=yes
